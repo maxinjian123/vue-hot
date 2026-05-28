@@ -1,0 +1,41 @@
+{
+  "name": "hot-sentinel",
+  "version": "1.0.0",
+  "description": "热点哨兵 - AI 驱动的热点监控与通知系统",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node server/index.js",
+    "dev:client": "vite --config client/vite.config.js",
+    "build": "vite build --config client/vite.config.js",
+    "db:init": "node server/scripts/init-db.js"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.20",
+    "dotenv": "^16.4.7",
+    "echarts": "^6.0.0",
+    "express": "^4.21.2",
+    "file-saver": "^2.0.5",
+    "mysql2": "^3.12.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "openai": "^4.77.3",
+    "puppeteer-core": "^24.42.0",
+    "sequelize": "^6.37.5",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "vue-echarts": "^8.0.1",
+    "vue-router": "^4.6.4",
+    "xlsx": "^0.18.5",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}
