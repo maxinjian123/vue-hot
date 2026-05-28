@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8.0
-    container_name: hot-sentinel-mysql
+    container_name: hot_sentinel
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: hot_sentinel
@@ -12,7 +12,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - hot_mysql_data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 10s
@@ -32,7 +32,7 @@ services:
       DB_HOST: mysql
       DB_PORT: 3306
       DB_USER: sentinel
-      DB_PASSWORD: sentinel123
+      DB_PASS: sentinel123
       DB_NAME: hot_sentinel
     ports:
       - "3000:3000"

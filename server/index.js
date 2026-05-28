@@ -10,9 +10,13 @@ const searchRouter = require('./routes/search');
 const dashboardRouter = require('./routes/dashboard');
 const scheduler = require('./services/scheduler');
 const settingsCache = require('./services/settingsCache');
+const path = require("path");
 
 const app = express();
 const httpServer = http.createServer(app);
+// 静态资源访问
+const frontendDist = path.join(__dirname, '..', 'dist')
+app.use(express.static(frontendDist))
 
 const io = new Server(httpServer, {
   cors: {

@@ -1,5 +1,5 @@
 # 第一阶段：构建前端
-FROM node:18-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN npm install --legacy-peer-deps
 RUN npm run build
 
 # 第二阶段：运行应用
-FROM node:18-alpine
+FROM node:22-alpine
 
 WORKDIR /app
 
