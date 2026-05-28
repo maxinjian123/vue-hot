@@ -107,7 +107,7 @@
 
 ```
 POST https://api.deepseek.com/chat/completions
-Header: Authorization: Bearer sk-f5173c51fde14c869c515353238b3498
+Header: Authorization: Bearer 
 Body: {
   "model": "deepseek-v4-flash",
   "messages": [...],
@@ -135,7 +135,7 @@ Model: spark-x
 
 ```
 POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
-Authorization: Bearer sk-448c2f41b96e4232ba68743634238878
+Authorization: Bearer s
 Model: qwen3.6-flash
 ```
 
@@ -163,7 +163,7 @@ Body: {
 ```
 GET https://api.twitterapi.io/twitter/tweet/advanced_search
     ?queryType=Latest&query={keyword}
-Header: X-API-Key: new1_fd5db722c1eb4913b67ebe120a78a541
+Header: X-API-Key: 
 ```
 
 - 查询类型：`Latest`（最新推文）
